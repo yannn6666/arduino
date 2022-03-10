@@ -1,6 +1,18 @@
+int16_t ADCvalue;
+
+void setup(){
+
+  Serial.begin(9600);
+}
+
+void loop(){
+  ADCvalue = analogRead(A0);
+  Thermistor(ADCvalue);
+}
+
 void Thermistor(int16_t ADCvalue)
 {
-  double T, Temp;
+  double T, Temp, V;
   double T0 = 301.15;  // 273.15 + 28 (room temperature) 室溫換成絕對溫度
   double lnR;
   int16_t R;          // Thermistor resistence 

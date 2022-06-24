@@ -169,7 +169,7 @@ void loop() {
     gyroYangle = kalAngleY;
 
 
-  vx =  (compAngleY+5);  
+  vx =  (compAngleY+4);  
   vy = (compAngleX);
   
   Serial.print("gyroX = ");   Serial.print(gyroX);
